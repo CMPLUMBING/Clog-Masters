@@ -12,28 +12,38 @@
             background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 25%, #90caf9 50%, #64b5f6 75%, #2196f3 100%); 
             background-attachment: fixed; /* Smooth parallax scroll */
             min-height: 100vh;
+            padding-top: 76px; /* Offset for fixed navbar on mobile */
         }
-        .navbar { background-color: #007bff !important; }
+        .navbar { background-color: #007bff !important; position: fixed; top: 0; width: 100%; z-index: 1000; }
         .navbar-brand, .nav-link { color: white !important; }
-        .section { padding: 4rem 0; /* Increased overall section padding for better spacing */ }
-        .section.bg-light:first-of-type { padding-top: 5rem; /* Extra top space after navbar for smooth flow */ }
-        .service-card { border-left: 4px solid #007bff; background: white; padding: 1.5rem; margin-bottom: 2rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: box-shadow 0.3s ease; }
-        .service-card:hover { box-shadow: 0 4px 8px rgba(0,0,0,0.15); }
-        .price-highlight { background-color: #e7f3ff; padding: 1rem; border-radius: 5px; font-weight: 600; }
+        .section { padding: 5rem 0; /* Generous spacing */ }
+        .section.bg-light:first-of-type { padding-top: 6rem; /* Extra top space post-navbar */ }
+        .service-card { border-left: 4px solid #007bff; background: white; padding: 2rem; margin-bottom: 2.5rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: box-shadow 0.3s ease; border-radius: 8px; }
+        .service-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
+        .price-highlight { background-color: #e7f3ff; padding: 1rem; border-radius: 5px; font-weight: 600; margin-top: 1rem; }
         .btn-primary { background-color: #007bff; border-color: #007bff; }
-        footer { background-color: #343a40; color: white; padding: 2rem 0; text-align: center; }
+        footer { background-color: #343a40; color: white; padding: 3rem 0; text-align: center; margin-top: 2rem; }
         .fade-in { animation: fadeIn 1s ease-in; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         h1 {
-            font-family: 'Playfair Display', serif; /* Elegant serif for main title */
-            font-size: 3rem;
+            font-family: 'Playfair Display', serif; /* Elegant serif */
+            font-size: 3.5rem;
             letter-spacing: 1px;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            margin-bottom: 1.5rem;
+        }
+        h3 { margin-bottom: 1rem; }
+        /* Mobile Magic */
+        @media (max-width: 768px) {
+            body { padding-top: 70px; background-attachment: scroll; }
+            .section { padding: 3rem 1rem !important; }
+            h1 { font-size: 2.5rem; }
+            .service-card { padding: 1.5rem; margin-bottom: 2rem; }
         }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <a class="navbar-brand" href="#">Clog Masters</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -102,9 +112,9 @@
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center fade-in">
-                    <h2 class="text-primary mb-4">What Our Clients Say</h2>
-                    <div class="blockquote text-center p-4 bg-white rounded shadow">
-                        <p>"Professional and pleasant to work with. They explained the problem and costs for each item used. Will use again!"</p>
+                    <h2 class="text-primary mb-5">What Our Clients Say</h2>
+                    <div class="blockquote p-4 bg-white rounded shadow mx-auto" style="max-width: 600px;">
+                        <p class="mb-3">"Professional and pleasant to work with. They explained the problem and costs for each item used. Will use again!"</p>
                         <footer class="blockquote-footer">Moonlight Motor Lodge</footer>
                     </div>
                 </div>
@@ -114,11 +124,10 @@
 
     <footer class="fade-in">
         <div class="container">
-            <p>&copy; 2025 Clog Masters. Proudly serving Chelan & Douglas Counties. Licensed in Washington State.</p>
+            <p class="mb-0">&copy; 2025 Clog Masters. Proudly serving Chelan & Douglas Counties. Licensed in Washington State.</p>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-```​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​
