@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | Clog Masters</title>
+    <title>Services & Pricing | Clog Masters</title>
     <link href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; color: #ffffff; background-color: #000000; }
-        header { background-color: #000000; text-align: center; padding: 1rem; border-bottom: 1px solid #333333; }
-        header img { max-width: 200px; height: auto; } 
+        .header { text-align: center; padding: 1rem; border-bottom: 1px solid #333333; background-color: #000000; }
+        .logo { width: 150px; height: auto; margin-bottom: 0.5rem; } 
         nav { background-color: #000000; padding: 0.5rem; text-align: center; border-bottom: 1px solid #333333; }
         nav a { color: #0066cc; margin: 0 1rem; text-decoration: none; font-weight: bold; }
         nav a:hover { color: #004499; }
@@ -18,26 +18,26 @@
         h2 { font-size: 1.8rem; color: #ffffff; margin-bottom: 1rem; }
         h3 { font-size: 1.4rem; color: #ffffff; margin-bottom: 0.5rem; }
         p { font-size: 1rem; margin-bottom: 1rem; text-align: justify; color: #ffffff; }
-        .service-item { margin-bottom: 2rem; }
-        .service-item img { width: 100px; height: 100px; float: left; margin-right: 1rem; }
-        .price-highlight { background-color: #111111; padding: 1rem; border-left: 4px solid #0066cc; margin: 1rem 0; color: #ffffff; }
-        blockquote { background-color: #111111; padding: 1rem; border-left: 4px solid #0066cc; margin: 2rem 0; font-style: italic; color: #ffffff; }
-        a { color: #0066cc; }
-        a:hover { color: #004499; }
-        footer { background-color: #000000; text-align: center; padding: 1rem; border-top: 1px solid #333333; font-size: 0.9rem; color: #cccccc; }
+        .service-item { margin-bottom: 2rem; padding: 1rem; border: 1px solid #333333; border-radius: 4px; }
+        .service-item img { width: 100px; height: 100px; float: left; margin-right: 1rem; border-radius: 4px; }
+        .price-highlight { background-color: #111111; padding: 1rem; border-left: 4px solid #0066cc; margin: 1rem 0; color: #ffffff; border-radius: 0 4px 4px 0; }
+        blockquote { background-color: #111111; padding: 1rem; border-left: 4px solid #0066cc; margin: 2rem 0; font-style: italic; color: #ffffff; border-radius: 0 4px 4px 0; }
+        .back-btn { background-color: #0066cc; color: #ffffff; padding: 0.8rem 1.5rem; text-decoration: none; border-radius: 4px; font-weight: bold; display: inline-block; margin-bottom: 1rem; }
+        footer { background-color: #000000; text-align: center; padding: 1rem; border-top: 1px solid #333333; font-size: 0.9rem; color: #cccccc; margin-top: 2rem; }
         @media (max-width: 600px) { main { padding: 0.5rem; } h1 { font-size: 2rem; } .service-item img { float: none; display: block; margin: 0 auto 1rem; } }
     </style>
 </head>
 <body>
-    <header>
-        <img src="images/logo.jpg" alt="Clog Masters Logo"> 
-        <h1>Services | Clog Masters</h1>
-    </header>
+    <div class="header">
+        <img src="images/logo.png" alt="Clog Masters Logo" class="logo"> 
+        <div class="title">Services & Pricing</div>
+    </div>
     <nav>
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
     </nav>
     <main>
+        <a href="index.html" class="back-btn">Back to Home</a>
         <section>
             <h2># Our Services</h2>
             <p>This is our Description of Services page and Costs Associated.</p>
@@ -52,7 +52,34 @@
             <p>This is charged Hourly at $125.00 per hour for Residential work and $150.00 per hour for Commercial work. An additional fee of $150.00 is applicable if it is decided, by the Technician, that a Mainline Sewer Machine is required. A Sewer Inspection may be necessary in order to give an answer to the reason behind clog and the cost for that is listed next.</p>
             <div class="price-highlight">All Calls include $85.00 Service Fee.</div>
         </section>
-        <!-- Add other services sections here, same style -->
+        <section class="service-item">
+            <img src="images/gas-line.jpg" alt="Gas Line Repair"> 
+            <h3>Gas Line Repair/Installation</h3>
+            <p>For repair, there is the $85 Service Fee, along with our hourly rate of $125.00 per hour plus any materials.</p>
+            <p>For gas installation, we can submit a quote to you for $150.</p>
+        </section>
+        <section class="service-item">
+            <img src="images/hydrojetting.jpg" alt="Hydrojetting Equipment"> 
+            <h3>Hydrojetting</h3>
+            <p>These costs mimic the costs of Drain Cleaning, but instead of using cabled machines we use high pressure water to get wall-to-wall cleaning.</p>
+        </section>
+        <section class="service-item">
+            <img src="images/inspection.jpg" alt="CCTV Inspection"> 
+            <h3>Sewer / Septic Inspection Via CCTV</h3>
+            <p>Using a CCTV Sewer Camera we will inspect, to the ability of the technician and machine, the length of the drain line in order to find the root cause of re-clogging drain lines, or to provide pre-purchase requirements of a home loan. Roots, Back-Graded Pipe, Collapsed Leach Fields, and Breaks in the drain line are some main issues we could find.</p>
+            <div class="price-highlight">There is an $85 Service Fee as included for all calls. The Hourly rate is $150.00. An additional fee of $100.00 will be assessed for use of the CCTV Camera to this service, and any other service (eg. Drain Cleaning) that requires use of it.</div>
+        </section>
+        <section class="service-item">
+            <img src="images/repair.jpg" alt="Sewer Repair"> 
+            <h3>Drain / Sewer/ Septic Repair</h3>
+            <p>This work is Quoted, and for most work runs between $200-$250 per foot but can increase with deeper excavation and depending on utilities in the way.</p>
+            <p>For short lengths we can get done the day of call out, we may opt to charge per hour plus parts. This would Include a $85.00 Service Fee if charged Hourly.</p>
+        </section>
+        <section class="service-item">
+            <img src="images/consultation.jpg" alt="Consultation"> 
+            <h3>Consultation</h3>
+            <p>For Consultation rates will be $150.00 Per Hour, this is to help homeowners do the work themselves, the right way!</p>
+        </section>
         <section>
             <h2>## What Our Clients Say</h2>
             <blockquote>
