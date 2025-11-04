@@ -3,131 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services & Pricing | Clog Masters</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <title>Services | Clog Masters</title>
+    <link href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap" rel="stylesheet"> <!-- Wix-like Arial -->
     <style>
-        body { 
-            font-family: 'Open Sans', sans-serif; 
-            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 25%, #90caf9 50%, #64b5f6 75%, #2196f3 100%); 
-            background-attachment: fixed; /* Smooth parallax scroll */
-            min-height: 100vh;
-            padding-top: 76px; /* Offset for fixed navbar on mobile */
-        }
-        .navbar { background-color: #007bff !important; position: fixed; top: 0; width: 100%; z-index: 1000; }
-        .navbar-brand, .nav-link { color: white !important; }
-        .section { padding: 5rem 0; /* Generous spacing */ }
-        .section.bg-light:first-of-type { padding-top: 6rem; /* Extra top space post-navbar */ }
-        .service-card { border-left: 4px solid #007bff; background: white; padding: 2rem; margin-bottom: 2.5rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: box-shadow 0.3s ease; border-radius: 8px; }
-        .service-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.15); }
-        .price-highlight { background-color: #e7f3ff; padding: 1rem; border-radius: 5px; font-weight: 600; margin-top: 1rem; }
-        .btn-primary { background-color: #007bff; border-color: #007bff; }
-        footer { background-color: #343a40; color: white; padding: 3rem 0; text-align: center; margin-top: 2rem; }
-        .fade-in { animation: fadeIn 1s ease-in; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        h1 {
-            font-family: 'Playfair Display', serif; /* Elegant serif */
-            font-size: 3.5rem;
-            letter-spacing: 1px;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
-            margin-bottom: 1.5rem;
-        }
-        h3 { margin-bottom: 1rem; }
-        /* Mobile Magic */
-        @media (max-width: 768px) {
-            body { padding-top: 70px; background-attachment: scroll; }
-            .section { padding: 3rem 1rem !important; }
-            h1 { font-size: 2.5rem; }
-            .service-card { padding: 1.5rem; margin-bottom: 2rem; }
-        }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; color: #000000; background-color: #ffffff; }
+        header { background-color: #ffffff; text-align: center; padding: 1rem; border-bottom: 1px solid #dddddd; }
+        header img { max-width: 200px; height: auto; } /* Photo spot: Logo */
+        nav { background-color: #f8f8f8; padding: 0.5rem; text-align: center; border-bottom: 1px solid #dddddd; }
+        nav a { color: #007bff; margin: 0 1rem; text-decoration: none; font-weight: bold; }
+        main { max-width: 800px; margin: 0 auto; padding: 1rem; }
+        section { margin-bottom: 2rem; padding: 1rem; border-bottom: 1px solid #dddddd; }
+        h1 { font-size: 2.5rem; color: #007bff; text-align: center; margin-bottom: 1rem; }
+        h2 { font-size: 1.8rem; color: #333333; margin-bottom: 1rem; }
+        h3 { font-size: 1.4rem; color: #007bff; margin-bottom: 0.5rem; }
+        p { font-size: 1rem; margin-bottom: 1rem; text-align: justify; }
+        .service-item { margin-bottom: 2rem; }
+        .service-item img { width: 100px; height: 100px; float: left; margin-right: 1rem; } /* Photo spots: Service icons */
+        .price-highlight { background-color: #f0f8ff; padding: 1rem; border-left: 4px solid #007bff; margin: 1rem 0; }
+        blockquote { background-color: #f8f8f8; padding: 1rem; border-left: 4px solid #007bff; margin: 2rem 0; font-style: italic; }
+        a { color: #007bff; }
+        footer { background-color: #f8f8f8; text-align: center; padding: 1rem; border-top: 1px solid #dddddd; font-size: 0.9rem; color: #666666; }
+        @media (max-width: 600px) { main { padding: 0.5rem; } h1 { font-size: 2rem; } .service-item img { float: none; display: block; margin: 0 auto 1rem; } }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">Clog Masters</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link active" href="services.html">Services</a></li>
-                </ul>
-            </div>
-        </div>
+    <header>
+        <img src="images/logo.jpg" alt="Clog Masters Logo"> <!-- Photo spot: Logo -->
+        <h1>Services | Clog Masters</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
     </nav>
-
-    <section class="section bg-light">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-10 text-center fade-in">
-                    <h1 class="text-primary">Our Services & Pricing</h1>
-                    <p class="lead">Transparent rates for reliable plumbing solutions. All prices exclude 8.3% tax (due at service). $85 service fee applies to non-quoted visits. We charge in full-hour increments.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto fade-in">
-                    <div class="service-card">
-                        <h3 class="text-primary">Drain / Sewer Cleaning & Unclogging</h3>
-                        <p>Our hourly rate: $125/residential, $150/commercial. Add $150 if mainline sewer machine needed. A sewer inspection may be required for root causes.</p>
-                        <div class="price-highlight">$85 service fee included on all calls.</div>
-                    </div>
-
-                    <div class="service-card">
-                        <h3 class="text-primary">Gas Line Repair/Installation</h3>
-                        <p>Repairs: $85 service fee + $125/hour + materials. Installations: We provide free quotes ($150 minimum).</p>
-                    </div>
-
-                    <div class="service-card">
-                        <h3 class="text-primary">Hydrojetting</h3>
-                        <p>We use high-pressure water for thorough, wall-to-wall cleaning. Rates match drain cleaning: $125/residential, $150/commercial hourly.</p>
-                    </div>
-
-                    <div class="service-card">
-                        <h3 class="text-primary">Sewer / Septic Inspection via CCTV</h3>
-                        <p>Our team uses camera inspections to diagnose clogs, roots, breaks, or pre-purchase issues. $85 service fee + $150/hour + $100 camera fee.</p>
-                    </div>
-
-                    <div class="service-card">
-                        <h3 class="text-primary">Drain / Sewer / Septic Repair</h3>
-                        <p>We quote most work at $200–$250/foot (varies by depth/utilities). Short jobs may bill hourly + parts ($85 fee).</p>
-                    </div>
-
-                    <div class="service-card">
-                        <h3 class="text-primary">Consultation</h3>
-                        <p>Our consultations: $150/hour to guide homeowners on DIY work done right.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section bg-light">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center fade-in">
-                    <h2 class="text-primary mb-5">What Our Clients Say</h2>
-                    <div class="blockquote p-4 bg-white rounded shadow mx-auto" style="max-width: 600px;">
-                        <p class="mb-3">"Professional and pleasant to work with. They explained the problem and costs for each item used. Will use again!"</p>
-                        <footer class="blockquote-footer">Moonlight Motor Lodge</footer>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="fade-in">
-        <div class="container">
-            <p class="mb-0">&copy; 2025 Clog Masters. Proudly serving Chelan & Douglas Counties. Licensed in Washington State.</p>
-        </div>
+    <main>
+        <section>
+            <h2># Our Services</h2>
+            <p>This is our Description of Services page and Costs Associated.</p>
+            <p>All calls, and any visit thereafter will include a $85.00 Service Fee, other than Quoted work.</p>
+            <p>For all hourly calls, the clock starts when we show up, and ends when we put the last tool away.</p>
+            <p>We charge in 1 hour increments, and if you go any time into an additional hour, you will be charged for it.</p>
+            <p>All costs on this page do not include tax of 8.3% that will be assessed to all Parts and Service, all costs including tax are due at time of service.</p>
+        </section>
+        <section class="service-item">
+            <img src="images/drain-cleaning.jpg" alt="Drain Cleaning Tools"> <!-- Photo spot -->
+            <h3>Drain / Sewer Cleaning and Unclogging</h3>
+            <p>This is charged Hourly at $125.00 per hour for Residential work and $150.00 per hour for Commercial work. An additional fee of $150.00 is applicable if it is decided, by the Technician, that a Mainline Sewer Machine is required. A Sewer Inspection may be necessary in order to give an answer to the reason behind clog and the cost for that is listed next.</p>
+            <div class="price-highlight">All Calls include $85.00 Service Fee.</div>
+        </section>
+        <section class="service-item">
+            <img src="images/gas-line.jpg" alt="Gas Line Repair"> <!-- Photo spot -->
+            <h3>Gas Line Repair/Installation</h3>
+            <p>For repair, there is the $85 Service Fee, along with our hourly rate of $125.00 per hour plus any materials.</p>
+            <p>For gas installation, we can submit a quote to you for $150.</p>
+        </section>
+        <section class="service-item">
+            <img src="images/hydrojetting.jpg" alt="Hydrojetting Equipment"> <!-- Photo spot -->
+            <h3>Hydrojetting</h3>
+            <p>These costs mimic the costs of Drain Cleaning, but instead of using cabled machines we use high pressure water to get wall-to-wall cleaning.</p>
+        </section>
+        <section class="service-item">
+            <img src="images/inspection.jpg" alt="CCTV Inspection"> <!-- Photo spot -->
+            <h3>Sewer / Septic Inspection Via CCTV</h3>
+            <p>Using a CCTV Sewer Camera we will inspect, to the ability of the technician and machine, the length of the drain line in order to find the root cause of re-clogging drain lines, or to provide pre-purchase requirements of a home loan. Roots, Back-Graded Pipe, Collapsed Leach Fields, and Breaks in the drain line are some main issues we could find.</p>
+            <div class="price-highlight">There is an $85 Service Fee as included for all calls. The Hourly rate is $150.00. An additional fee of $100.00 will be assessed for use of the CCTV Camera to this service, and any other service (eg. Drain Cleaning) that requires use of it.</div>
+        </section>
+        <section class="service-item">
+            <img src="images/repair.jpg" alt="Sewer Repair"> <!-- Photo spot -->
+            <h3>Drain / Sewer/ Septic Repair</h3>
+            <p>This work is Quoted, and for most work runs between $200-$250 per foot but can increase with deeper excavation and depending on utilities in the way.</p>
+            <p>For short lengths we can get done the day of call out, we may opt to charge per hour plus parts. This would Include a $85.00 Service Fee if charged Hourly.</p>
+        </section>
+        <section class="service-item">
+            <img src="images/consultation.jpg" alt="Consultation"> <!-- Photo spot -->
+            <h3>Consultation</h3>
+            <p>For Consultation rates will be $150.00 Per Hour, this is to help homeowners do the work themselves, the right way!</p>
+        </section>
+        <section>
+            <h2>## What Our Clients Say</h2>
+            <blockquote>
+                <p>"Professional and pleasant to work with. He explained the problem and the cost for each item used. Will be using this company again" - Moonlight Motor Lodge</p>
+            </blockquote>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Clog Masters. Serving Chelan & Douglas Counties.</p>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
