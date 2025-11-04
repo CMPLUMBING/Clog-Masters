@@ -4,138 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clog Masters | Cashmere Plumber | Leavenworth</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap" rel="stylesheet"> <!-- Wix-like Arial -->
     <style>
-        body { 
-            font-family: 'Open Sans', sans-serif; 
-            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 25%, #90caf9 50%, #64b5f6 75%, #2196f3 100%); 
-            background-attachment: fixed; /* Smooth parallax scroll */
-            min-height: 100vh;
-            padding-top: 76px; /* Offset for fixed navbar on mobile */
-        }
-        .navbar { background-color: #007bff !important; position: fixed; top: 0; width: 100%; z-index: 1000; }
-        .navbar-brand, .nav-link { color: white !important; }
-        .hero { 
-            background: rgba(0, 123, 255, 0.95); /* Bumped opacity for mobile contrast—no more vanishing act */
-            color: white; padding: 8rem 0 6rem; text-align: center; /* Extra top padding for mobile breathing room */
-        }
-        .hero h1 {
-            font-family: 'Playfair Display', serif; /* Elegant serif for brand */
-            font-size: 4.5rem; /* Bigger on desktop */
-            font-weight: 700;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Stronger shadow for pop */
-            letter-spacing: 2px;
-        }
-        .hero .lead {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-        }
-        .section { padding: 5rem 0; /* Generous spacing all around */ }
-        .section.bg-light:first-of-type { padding-top: 6rem; /* Smooth flow post-hero */ }
-        .card { border: none; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.3s ease, box-shadow 0.3s ease; margin-bottom: 2rem; }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 8px 15px rgba(0,0,0,0.2); }
-        .btn-primary { background-color: #007bff; border-color: #007bff; }
-        footer { background-color: #343a40; color: white; padding: 3rem 0; text-align: center; margin-top: 2rem; }
-        .fade-in { animation: fadeIn 1s ease-in; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        /* Mobile Magic */
-        @media (max-width: 768px) {
-            body { padding-top: 70px; background-attachment: scroll; } /* No parallax on mobile for perf */
-            .hero { padding: 6rem 1rem 4rem !important; }
-            .hero h1 { font-size: 3rem; letter-spacing: 1px; }
-            .hero .lead { font-size: 1.2rem; }
-            .section { padding: 3rem 1rem !important; }
-            .card { margin-bottom: 1.5rem; padding: 1.5rem; }
-        }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; color: #000000; background-color: #ffffff; }
+        header { background-color: #ffffff; text-align: center; padding: 1rem; border-bottom: 1px solid #dddddd; }
+        header img { max-width: 200px; height: auto; } /* Photo spot: Logo */
+        nav { background-color: #f8f8f8; padding: 0.5rem; text-align: center; border-bottom: 1px solid #dddddd; }
+        nav a { color: #007bff; margin: 0 1rem; text-decoration: none; font-weight: bold; }
+        main { max-width: 800px; margin: 0 auto; padding: 1rem; }
+        section { margin-bottom: 2rem; padding: 1rem; border-bottom: 1px solid #dddddd; }
+        h1 { font-size: 2.5rem; color: #007bff; text-align: center; margin-bottom: 1rem; }
+        h2 { font-size: 1.8rem; color: #333333; margin-bottom: 1rem; }
+        p { font-size: 1rem; margin-bottom: 1rem; text-align: justify; }
+        ul { list-style-type: none; padding: 0; }
+        li { margin-bottom: 0.5rem; }
+        .hero { text-align: center; margin-bottom: 2rem; }
+        .hero img { width: 100%; max-height: 300px; object-fit: cover; margin-bottom: 1rem; } /* Photo spot: Hero banner */
+        .services-overview { display: flex; justify-content: space-around; flex-wrap: wrap; }
+        .service-item { flex: 1 1 30%; margin: 1rem; text-align: center; }
+        .service-item img { width: 80px; height: 80px; margin-bottom: 0.5rem; } /* Photo spots: Service icons */
+        a { color: #007bff; }
+        footer { background-color: #f8f8f8; text-align: center; padding: 1rem; border-top: 1px solid #dddddd; font-size: 0.9rem; color: #666666; }
+        @media (max-width: 600px) { main { padding: 0.5rem; } h1 { font-size: 2rem; } .services-overview { flex-direction: column; } }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container">
-            <a class="navbar-brand" href="#">Clog Masters</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-                </ul>
-            </div>
-        </div>
+    <header>
+        <img src="images/logo.jpg" alt="Clog Masters Logo"> <!-- Photo spot: Replace with your logo -->
+        <h1>Clog Masters | Cashmere Plumber | Leavenworth</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
     </nav>
-
-    <section class="hero fade-in">
-        <div class="container">
-            <h1>Clog Masters</h1>
-            <p class="lead">Your Trusted Plumber in Cashmere & Leavenworth</p>
-            <a href="services.html" class="btn btn-light btn-lg">View Pricing</a>
-        </div>
-    </section>
-
-    <section class="section bg-light">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center fade-in">
-                    <p class="lead">Clog Masters handles all your main sewer, gas line, and home water supply issues—24/7. We've tackled every challenge imaginable since 2020, serving Chelan and Douglas counties, including Leavenworth, Peshastin, Dryden, Cashmere, Wenatchee, East Wenatchee, Entiat, Orondo, Chelan, and beyond. For reliable main water line repairs, sewer and septic unclogging, or gas line solutions, we're your one-stop experts—at the right price. Why go anywhere else?</p>
+    <main>
+        <section class="hero">
+            <img src="images/hero.jpg" alt="Professional Plumbing Services"> <!-- Photo spot: Hero image -->
+            <p>Clog Masters handles all your main sewer, gas line, and home water supply issues—24/7. We've tackled every challenge imaginable since 2020, serving Chelan and Douglas counties, including Leavenworth, Peshastin, Dryden, Cashmere, Wenatchee, East Wenatchee, Entiat, Orondo, Chelan, and beyond. For reliable main water line repairs, sewer and septic unclogging, or gas line solutions, we're your one-stop experts—at the right price. Why go anywhere else?</p>
+            <a href="services.html" style="display: inline-block; background: #007bff; color: white; padding: 0.8rem 1.5rem; text-decoration: none; border-radius: 4px;">Check out pricing by clicking HERE!</a>
+        </section>
+        <section>
+            <h2># some of our services</h2>
+            <p>Some services and tools will incur a fee that is additional to our hourly rate.</p>
+            <div class="services-overview">
+                <div class="service-item">
+                    <img src="images/service1.jpg" alt="Gas Line Installation"> <!-- Photo spot -->
+                    <h3>Gas line installation</h3>
+                </div>
+                <div class="service-item">
+                    <img src="images/service2.jpg" alt="Mainline Water Line"> <!-- Photo spot -->
+                    <h3>Mainline Water Line</h3>
+                </div>
+                <div class="service-item">
+                    <img src="images/service3.jpg" alt="Hydro Jet Drain Cleaning"> <!-- Photo spot -->
+                    <h3>Hydro Jet Drain Cleaning</h3>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-4 fade-in">
-                    <div class="card h-100 text-center p-4">
-                        <h5 class="card-title text-primary mb-3">Our Services</h5>
-                        <p class="card-text">From hydro jet drain cleaning to gas line installation, we cover it all. Some specialized tools may add to our hourly rate.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4 fade-in">
-                    <div class="card h-100 text-center p-4">
-                        <h5 class="card-title text-primary mb-3">What We Promise</h5>
-                        <p class="card-text">We provide upfront estimates, clear explanations of the work, and comprehensive follow-ups to ensure your complete satisfaction. Licensed, on-time, and no job too big or small.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 mb-4 fade-in">
-                    <div class="card h-100 text-center p-4">
-                        <h5 class="card-title text-primary mb-3">Why Choose Us?</h5>
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><strong>On Time:</strong> We schedule appointments within 48 hours; emergencies anytime.</li>
-                            <li class="mb-2"><strong>Affordable:</strong> We're respectful of your time and budget.</li>
-                            <li><strong>Licensed & Experienced:</strong> Washington State pros you can trust—our team sets us apart.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section bg-light">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center fade-in">
-                    <h2 class="text-primary mb-5">Ready to Get Started?</h2>
-                    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="row g-3">
-                        <div class="col-md-6"><input type="text" class="form-control" name="name" placeholder="Your Name" required></div>
-                        <div class="col-md-6"><input type="email" class="form-control" name="email" placeholder="Your Email" required></div>
-                        <div class="col-12"><textarea class="form-control" name="message" rows="4" placeholder="Describe your issue..." required></textarea></div>
-                        <div class="col-12"><button type="submit" class="btn btn-primary btn-lg">Send Message</button></div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="fade-in">
-        <div class="container">
-            <p class="mb-0">&copy; 2025 Clog Masters. Proudly serving Chelan & Douglas Counties. Licensed in Washington State.</p>
-        </div>
+        </section>
+        <section>
+            <h2>## What We Promise</h2>
+            <p>Since 2020, Clog Masters in Cashmere has been providing high quality, affordable clogged drain, sewer, mainline water and mechanical services with a focused attention to detail. We provide upfront estimates, clear explanations of the work, and comprehensive follow-ups to ensure complete satisfaction.</p>
+            <ul>
+                <li><strong>On Time!</strong> No worry scheduling! Regular appointments available within 48 hours, emergency and after hours calls anytime!</li>
+                <li><strong>No Job Too Big or Small!</strong> Quality service that is respectful to your time and money</li>
+                <li><strong>Licensed!</strong> If your contractor isn't, check us out, being licensed is a bare minimum requirement for work in Washington State, experience and trust are what sets our team apart!</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Clog Masters. Serving Chelan & Douglas Counties.</p>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
