@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no">
   <title>Clog Masters | 24/7 Emergency Drain Cleaning & Sewer Repair</title>
+  <meta name="description" content="Fast, licensed drain cleaning, hydro-jetting, sewer repair, backflow testing & emergency plumbing in Cashmere, Leavenworth & Wenatchee. Call (509) 669-4232">
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -14,37 +16,52 @@
   <div class="top-bar">
     <div class="container top-bar-container">
       <span class="top-bar-tagline">24/7 Emergency Service</span>
-      <a href="tel:+15096694232" class="top-phone">📞 (509) 669-4232</a>
+      <a href="tel:+15096694232" class="top-phone">
+        <span>📞</span> (509) 669-4232
+      </a>
     </div>
   </div>
 
-  <!-- Sleek Header with Inline Brand Text -->
+  <!-- Header -->
   <header>
     <div class="container header-inner">
-      <a href="#" class="brand-link">
-        <img src="images/logo.JPG" alt="Clog Masters Logo" class="header-logo-icon">
-        <span class="brand-text">CLOG MASTERS</span>
-      </a>
-      <a href="tel:+15096694232" class="btn-nav">Call (509) 669-4232</a>
+      <img src="images/logo.JPG" alt="Clog Masters Logo" class="logo">
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#why-us">Why Us</a>
+        <a href="tel:+15096694232" class="btn-nav">Call (509) 669-4232</a>
+      </nav>
     </div>
   </header>
 
-  <!-- Banner integrated as full Hero Background -->
-  <section class="hero-banner-section">
-    <div class="hero-overlay">
-      <div class="container hero-content">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
         <div class="badge">Local • Licensed • 24/7 Emergency</div>
         <h1>Blocked Drain or Backed-Up Sewer?</h1>
-        <p class="hero-sub">We clear tough clogs fast with zero hidden fees. Serving Cashmere, Leavenworth, & Wenatchee.</p>
-        <a href="tel:+15096694232" class="btn-primary">📞 Call Now: (509) 669-4232</a>
+        <p class="hero-sub">We clear tough clogs fast with zero hidden fees. Serving Cashmere, Leavenworth, Wenatchee, and surrounding areas.</p>
+        
+        <div class="hero-ctas">
+          <a href="tel:+15096694232" class="btn-primary">
+            📞 Call Now: (509) 669-4232
+          </a>
+        </div>
+        <p class="micro-trust">⚡ Average response time: Under 60 minutes for emergencies.</p>
+      </div>
+      
+      <div class="hero-image">
+        <img src="images/banner.jpg" alt="Clog Masters Plumbing Vehicle and Equipment">
       </div>
     </div>
   </section>
 
-  <!-- Compact Review Slider -->
+  <!-- Compact Single-Review Auto-Slider Section -->
   <section class="reviews-section">
     <div class="container">
       <div class="review-box">
+        
+        <!-- Top Compact Line -->
         <div class="review-top-line">
           <div class="g-badge">
             <span class="g-icon">G</span>
@@ -53,27 +70,43 @@
           <div class="stars">⭐⭐⭐⭐⭐</div>
         </div>
 
+        <!-- ONLY 1 SLIDE SHOWS AT A TIME -->
         <div class="review-slide active" style="display: block;">
           <p class="review-text">"Called Clog Masters for a backed-up main sewer line on a Sunday. Arrived in under 45 minutes, upfront price, cleared fast!"</p>
           <span class="review-author">— Mark T., Wenatchee</span>
         </div>
+
         <div class="review-slide" style="display: none;">
-          <p class="review-text">"Judah came out to hydro-jet our restaurant lines. Professional, clean, and zero surprise fees."</p>
+          <p class="review-text">"Judah came out to hydro-jet our restaurant lines. Professional, clean, and zero surprise fees. Highly recommend!"</p>
           <span class="review-author">— Sarah K., Leavenworth</span>
         </div>
+
+        <div class="review-slide" style="display: none;">
+          <p class="review-text">"Had a severe drain blockage two other companies couldn't clear. Clog Masters located the root intrusion and fixed it immediately."</p>
+          <span class="review-author">— David P., Cashmere</span>
+        </div>
+
+        <div class="review-slide" style="display: none;">
+          <p class="review-text">"Super fast response time! They fixed our emergency kitchen sink clog in no time. Friendly, honest, and fair pricing."</p>
+          <span class="review-author">— Elena R., East Wenatchee</span>
+        </div>
+
       </div>
     </div>
   </section>
 
   <!-- Mobile Call Bar -->
   <div class="mobile-call-bar">
-    <a href="tel:+15096694232" class="btn-mobile-call">📞 CALL NOW: (509) 669-4232</a>
+    <a href="tel:+15096694232" class="btn-mobile-call">
+      📞 CALL NOW: (509) 669-4232
+    </a>
   </div>
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const slides = document.querySelectorAll('.review-slide');
       let index = 0;
+
       setInterval(() => {
         slides[index].style.display = 'none';
         index = (index + 1) % slides.length;
@@ -81,5 +114,6 @@
       }, 6000);
     });
   </script>
+
 </body>
 </html>
