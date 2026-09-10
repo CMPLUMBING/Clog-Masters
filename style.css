@@ -4,11 +4,6 @@
   box-sizing: border-box;
 }
 
-html, body {
-  width: 100%;
-  overflow-x: hidden;
-}
-
 body {
   font-family: 'Inter', system-ui, sans-serif;
   line-height: 1.6;
@@ -19,7 +14,6 @@ body {
 
 .container {
   max-width: 1100px;
-  width: 100%;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -97,22 +91,6 @@ nav a {
   background: #004d99;
 }
 
-/* Banner Section Below Header */
-.banner-section {
-  background: #f8fafc;
-  padding: 15px 0 0 0;
-  text-align: center;
-}
-
-.site-banner {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  display: block;
-}
-
 /* Hero */
 .hero {
   background: linear-gradient(135deg, #f0f7ff 0%, #e0f0fe 100%);
@@ -120,8 +98,10 @@ nav a {
 }
 
 .hero-content {
-  display: block;
-  max-width: 800px;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 30px;
+  align-items: center;
 }
 
 .badge {
@@ -183,6 +163,14 @@ nav a {
   font-size: 0.85rem;
   color: #555;
   font-weight: 600;
+}
+
+.hero-image img {
+  width: 100%;
+  max-height: 380px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
 }
 
 /* ULTRA COMPACT SINGLE REVIEW SECTION */
@@ -424,7 +412,7 @@ footer a {
   }
 
   .logo {
-    height: 60px;
+    height: 70px;
   }
 
   .top-bar {
@@ -433,6 +421,10 @@ footer a {
 
   .mobile-call-bar {
     display: block !important;
+  }
+
+  .hero-content {
+    grid-template-columns: 1fr;
   }
 
   .hero h1 {
