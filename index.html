@@ -56,67 +56,67 @@
     </div>
   </section>
 
-  <!-- Compact Google Reviews Auto-Slider (Half-Height Layout) -->
+  <!-- Compact Single-Review Auto-Slider Section -->
   <section class="reviews-section">
     <div class="container">
-      <div class="review-display-box">
+      <div class="review-box">
         
-        <!-- Header row inline inside card to save space -->
-        <div class="reviews-header">
-          <div class="rating-badge">
-            <span class="g-logo">G</span>
-            <span class="rating-text"><strong>5.0 Rating</strong> on Google</span>
+        <!-- Top Compact Line -->
+        <div class="review-top-line">
+          <div class="g-badge">
+            <span class="g-icon">G</span>
+            <strong>5.0 Rating</strong>
           </div>
-          <div class="review-stars">⭐⭐⭐⭐⭐</div>
+          <div class="stars">⭐⭐⭐⭐⭐</div>
         </div>
-        
-        <!-- Rotating Review Slides -->
-        <div class="review-slide active">
-          <p class="review-text">"Called Clog Masters for a backed-up main sewer line on a Sunday. They arrived in under 45 minutes, gave me an exact upfront price, and had it cleared fast!"</p>
+
+        <!-- ONLY 1 SLIDE SHOWS AT A TIME -->
+        <div class="review-slide active" style="display: block;">
+          <p class="review-text">"Called Clog Masters for a backed-up main sewer line on a Sunday. Arrived in under 45 minutes, upfront price, cleared fast!"</p>
           <span class="review-author">— Mark T., Wenatchee</span>
         </div>
 
-        <div class="review-slide">
-          <p class="review-text">"Judah came out to hydro-jet our restaurant lines. Professional, clean, and explained everything. Upfront pricing and zero surprise fees. Highly recommend!"</p>
+        <div class="review-slide" style="display: none;">
+          <p class="review-text">"Judah came out to hydro-jet our restaurant lines. Professional, clean, and zero surprise fees. Highly recommend!"</p>
           <span class="review-author">— Sarah K., Leavenworth</span>
         </div>
 
-        <div class="review-slide">
-          <p class="review-text">"Had a severe drain blockage that two other companies couldn't clear. Clog Masters brought in their camera inspection tool, located the root intrusion, and fixed it immediately."</p>
+        <div class="review-slide" style="display: none;">
+          <p class="review-text">"Had a severe drain blockage two other companies couldn't clear. Clog Masters located the root intrusion and fixed it immediately."</p>
           <span class="review-author">— David P., Cashmere</span>
         </div>
 
-        <div class="review-slide">
-          <p class="review-text">"Super fast response time! They fixed our emergency kitchen sink clog in no time. Friendly, honest, and very fair pricing."</p>
+        <div class="review-slide" style="display: none;">
+          <p class="review-text">"Super fast response time! They fixed our emergency kitchen sink clog in no time. Friendly, honest, and fair pricing."</p>
           <span class="review-author">— Elena R., East Wenatchee</span>
         </div>
 
-        <div class="review-slide">
-          <p class="review-text">"Outstanding service for our annual backflow testing and repair. Showed up right on schedule and handled all local water department paperwork seamlessly."</p>
+        <div class="review-slide" style="display: none;">
+          <p class="review-text">"Outstanding service for our backflow testing. Showed up right on schedule and handled all paperwork seamlessly."</p>
           <span class="review-author">— Brian M., Wenatchee</span>
         </div>
 
-        <div class="review-slide">
-          <p class="review-text">"Honest, hard-working team. No hidden charges—what they quoted over the phone was the exact amount I paid. Will only be using Clog Masters from now on."</p>
+        <div class="review-slide" style="display: none;">
+          <p class="review-text">"Honest, hard-working team. No hidden charges—what they quoted over the phone was the exact amount I paid."</p>
           <span class="review-author">— Rachel S., Leavenworth</span>
         </div>
 
-        <div class="review-slide">
-          <p class="review-text">"Our mainline backed up right before a family gathering. They treated it like a true emergency and were at our door in 30 minutes. Saved the day!"</p>
+        <div class="review-slide" style="display: none;">
+          <p class="review-text">"Our mainline backed up right before a family gathering. Arrived in 30 minutes and saved the day!"</p>
           <span class="review-author">— Jason B., Cashmere</span>
         </div>
 
-        <div class="review-slide">
-          <p class="review-text">"Very thorough camera inspection. Showed us the video footage of our sewer line so we knew exactly what was wrong before starting any work. 5 stars!"</p>
+        <div class="review-slide" style="display: none;">
+          <p class="review-text">"Thorough camera inspection. Showed us the video footage of our sewer line so we knew exactly what was wrong."</p>
           <span class="review-author">— Amanda L., Wenatchee</span>
         </div>
 
-        <div class="review-slide">
-          <p class="review-text">"Top notch equipment and even better customer service. Cleared a heavy grease clog that had been bothering us for weeks."</p>
+        <div class="review-slide" style="display: none;">
+          <p class="review-text">"Top notch equipment and customer service. Cleared a heavy grease clog that had been bothering us for weeks."</p>
           <span class="review-author">— Chris H., East Wenatchee</span>
         </div>
 
-        <div class="review-slide">
+        <div class="review-slide" style="display: none;">
           <p class="review-text">"Prompt, polite, and left the work area spotless after clearing our bathroom drain. 10/10 service!"</p>
           <span class="review-author">— Megan W., Leavenworth</span>
         </div>
@@ -284,17 +284,21 @@
     </a>
   </div>
 
-  <!-- Review Auto-Cycle Script -->
+  <!-- Review Switcher JS -->
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const slides = document.querySelectorAll('.review-slide');
-      let currentIndex = 0;
+      let index = 0;
 
       setInterval(() => {
-        slides[currentIndex].classList.remove('active');
-        currentIndex = (currentIndex + 1) % slides.length;
-        slides[currentIndex].classList.add('active');
-      }, 6000); // 6 seconds per review
+        slides[index].style.display = 'none';
+        slides[index].classList.remove('active');
+        
+        index = (index + 1) % slides.length;
+        
+        slides[index].style.display = 'block';
+        slides[index].classList.add('active');
+      }, 6000); // Cycles 1 review every 6 seconds
     });
   </script>
 
