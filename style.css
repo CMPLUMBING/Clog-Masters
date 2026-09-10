@@ -1,4 +1,4 @@
-* {
+l* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -23,7 +23,7 @@ body {
   background: #0a2540;
   color: white;
   padding: 8px 0;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
 }
 
@@ -31,12 +31,17 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
 }
 
 .top-phone {
   color: #4fc3f7;
   font-weight: 700;
   text-decoration: none;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
 }
 
 /* Header */
@@ -328,6 +333,19 @@ footer a {
 @media (max-width: 768px) {
   body {
     padding-bottom: 80px;
+  }
+
+  .top-bar {
+    font-size: 0.8rem;
+  }
+  
+  .top-phone .phone-text {
+    display: none;
+  }
+  
+  .top-phone::after {
+    content: "CALL";
+    font-size: 0.8rem;
   }
 
   .mobile-call-bar {
